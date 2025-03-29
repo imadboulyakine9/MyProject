@@ -1,5 +1,5 @@
 # Rapport de Projet: Système d'Authentification avec Flask
-### Faculté des Sciences et Techniques - FST
+### Faculté des Sciences et Techniques - FSTT
 #### Réalisé par: [Votre Nom]
 #### Encadré par: [Nom du Professeur]
 
@@ -242,7 +242,7 @@ Ce projet m'a permis de mettre en pratique mes connaissances en:
 - Ajouter plus de fonctionnalités au profil utilisateur
 
 ### Remerciements
-Je tiens à remercier mes professeurs de la FST pour leur encadrement et leurs conseils précieux tout au long de ce projet.
+Je tiens à remercier particulièrement le professeur Othmane Bakkali pour son encadrement et ses conseils précieux tout au long de ce projet, ainsi que tous les autres professeurs de la FSTT.
 
 ---
-© 2024 FST - Tous droits réservés
+© 2024 FSTT - Tous droits réservés
