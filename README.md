@@ -1,7 +1,7 @@
 # Rapport de Projet: Système d'Authentification avec Flask
 ### Faculté des Sciences et Techniques - FSTT
-#### Réalisé par: [Votre Nom]
-#### Encadré par: [Nom du Professeur]
+#### Réalisé par: Imad Boulyakine
+#### Encadré par: Othmane Bakkali
 
 ## Table des Matières
 1. [Introduction](#introduction)
