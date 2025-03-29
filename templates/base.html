@@ -16,10 +16,13 @@
 </head>
 <body>
     <div class="nav">
-        <a href="{{ url_for('auth.login') }}">Connexion</a>
-        <a href="{{ url_for('auth.register') }}">Inscription</a>
-        <a href="{{ url_for('auth.profile') }}">Profile</a>
-        <a href="{{ url_for('auth.logout') }}">Déconnexion</a>
+        {% if not is_authenticated() %}
+            <a href="{{ url_for('auth.login') }}">Connexion</a>
+            <a href="{{ url_for('auth.register') }}">Inscription</a>
+        {% else %}
+            <a href="{{ url_for('auth.profile') }}">Profile</a>
+            <a href="{{ url_for('auth.logout') }}">Déconnexion</a>
+        {% endif %}
     </div>
     
     {% with messages = get_flashed_messages() %}

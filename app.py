@@ -1,6 +1,6 @@
 # Fichier principal de l'application Flask
 from flask import Flask, redirect, url_for
-from flask_jwt_extended import JWTManager
+from flask_jwt_extended import JWTManager, get_jwt_identity, verify_jwt_in_request
 from models import db
 from dotenv import load_dotenv
 import os
@@ -25,10 +25,24 @@ def create_app():
     db.init_app(app)
     jwt.init_app(app)
 
+    @app.context_processor
+    def utility_processor():
+        def is_authenticated():
+            try:
+                verify_jwt_in_request()
+                return True
+            except:
+                return False
+        return dict(is_authenticated=is_authenticated)
+
     # Route par défaut
     @app.route('/')
     def index():
-        return redirect(url_for('auth.login'))
+        try:
+            verify_jwt_in_request()
+            return redirect(url_for('auth.profile'))
+        except:
+            return redirect(url_for('auth.login'))
 
     # Import et enregistrement des routes
     from routes import auth_bp
